@@ -1,0 +1,57 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,adGroup.id,searchTermView.searchTerm,segments.keyword.info.text,segments.conversionActionName,metrics.conversions,metrics.conversionsValue",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000001"
+        },
+        "adGroup": {
+          "id": "90000002"
+        },
+        "searchTermView": {
+          "searchTerm": "converts-now"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw brand"
+            }
+          },
+          "conversionActionName": "Basic Trial Signup"
+        },
+        "metrics": {
+          "conversions": 2,
+          "conversionsValue": 700
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "adGroup": {
+          "id": "90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "over-cut-line"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw alpha"
+            }
+          },
+          "conversionActionName": "Basic Trial Signup"
+        },
+        "metrics": {
+          "conversions": 1,
+          "conversionsValue": 350
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

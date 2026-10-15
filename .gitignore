@@ -1,0 +1,6 @@
+# Runtime artifacts — reports, raw GAQL pulls, and the recommendations log
+# are generated where the skills run and contain live account data.
+google-ads/outputs/
+outputs/
+
+.DS_Store

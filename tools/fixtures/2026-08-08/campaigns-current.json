@@ -1,0 +1,141 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,campaign.name,campaign.status,campaign.advertisingChannelType,campaign.biddingStrategyType,campaign.maximizeConversionValue.targetRoas,campaign.maximizeConversions.targetCpaMicros,campaign.targetRoas.targetRoas,campaign.targetCpa.targetCpaMicros,campaignBudget.id,campaignBudget.amountMicros,campaignBudget.explicitlyShared",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic - Search - Brand - Core",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "biddingStrategyType": "MAXIMIZE_CONVERSION_VALUE",
+          "resourceName": "customers/9999999999/campaigns/70000000001",
+          "maximizeConversionValue": {
+            "targetRoas": 20
+          }
+        },
+        "campaignBudget": {
+          "id": "80000001",
+          "amountMicros": "100000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000001"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "biddingStrategyType": "MAXIMIZE_CONVERSION_VALUE",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "maximizeConversionValue": {
+            "targetRoas": 1.2
+          }
+        },
+        "campaignBudget": {
+          "id": "80000002",
+          "amountMicros": "400000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000002"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000003",
+          "name": "Synthetic - Performance Max",
+          "status": "ENABLED",
+          "advertisingChannelType": "PERFORMANCE_MAX",
+          "biddingStrategyType": "MAXIMIZE_CONVERSION_VALUE",
+          "resourceName": "customers/9999999999/campaigns/70000000003",
+          "maximizeConversionValue": {
+            "targetRoas": 1.5
+          }
+        },
+        "campaignBudget": {
+          "id": "80000003",
+          "amountMicros": "500000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000003"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000004",
+          "name": "Synthetic - Demand Gen",
+          "status": "ENABLED",
+          "advertisingChannelType": "DEMAND_GEN",
+          "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+          "resourceName": "customers/9999999999/campaigns/70000000004",
+          "maximizeConversions": {
+            "targetCpaMicros": "400000000"
+          }
+        },
+        "campaignBudget": {
+          "id": "80000004",
+          "amountMicros": "50000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000004"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000005",
+          "name": "Synthetic - Search - Dormant Shell",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "biddingStrategyType": "TARGET_SPEND",
+          "resourceName": "customers/9999999999/campaigns/70000000005"
+        },
+        "campaignBudget": {
+          "id": "80000005",
+          "amountMicros": "75000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000005"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000006",
+          "name": "Synthetic - Search - Shared A",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "biddingStrategyType": "MAXIMIZE_CONVERSION_VALUE",
+          "resourceName": "customers/9999999999/campaigns/70000000006",
+          "maximizeConversionValue": {
+            "targetRoas": 1.1
+          }
+        },
+        "campaignBudget": {
+          "id": "80000006",
+          "amountMicros": "200000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000006"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000007",
+          "name": "Synthetic - Search - Shared B",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "biddingStrategyType": "MAXIMIZE_CONVERSION_VALUE",
+          "resourceName": "customers/9999999999/campaigns/70000000007",
+          "maximizeConversionValue": {
+            "targetRoas": 1.1
+          }
+        },
+        "campaignBudget": {
+          "id": "80000006",
+          "amountMicros": "200000000",
+          "explicitlyShared": false,
+          "resourceName": "customers/9999999999/campaignBudgets/80000006"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

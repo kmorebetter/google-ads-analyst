@@ -1,0 +1,11 @@
+Search terms report
+"August 1, 2026 - August 30, 2026"
+Search term,Match type,Added/Excluded,Campaign,Ad group,Clicks,Impr.,CTR,Currency code,Avg. CPC,Cost,Conversions,Cost / conv.
+acme invoicing,Exact match,Added,Search - Brand - Core,Brand,120,900,13.33%,USD,0.80,96.00,30.00,3.20
+acme login,Phrase match,None,Search - Brand - Core,Brand,40,300,13.33%,USD,0.50,20.00,0.00,0.00
+free invoice template word,Broad match,None,Search - Generic - Invoicing,Invoicing,35,1200,2.92%,USD,2.00,70.00,0.00,0.00
+invoice generator,Broad match,None,Search - Generic - Invoicing,Invoicing,4,150,2.67%,USD,15.00,60.00,0.00,0.00
+small business invoicing software,Phrase match,None,Search - Generic - Invoicing,Invoicing,50,700,7.14%,USD,4.00,200.00,2.00,100.00
+how to write an invoice,Broad match,None,Search - Generic - Invoicing,Invoicing,30,2000,1.50%,USD,"1,000.00",1000.00,1.00,1000.00
+cheap invoice,Broad match,None,Search - Generic - Invoicing,Invoicing,2,40,5.00%,USD,5.00,10.00,0.00,0.00
+Total: Search terms,,,,,281,5290,,,,1456.00,33.00,

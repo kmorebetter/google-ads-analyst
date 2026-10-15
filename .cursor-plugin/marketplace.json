@@ -1,0 +1,13 @@
+{
+  "name": "google-ads-analyst",
+  "owner": {
+    "name": "kmorebetter"
+  },
+  "plugins": [
+    {
+      "name": "google-ads-analyst",
+      "source": "./",
+      "description": "Read-only Google Ads analysis from CSV exports or the Google Ads API"
+    }
+  ]
+}

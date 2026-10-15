@@ -1,0 +1,364 @@
+{
+  "negatives": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "clarity_grade": 4.1,
+    "em_dashes": 0,
+    "seconds_large": 0.06,
+    "scenarios": [
+      {
+        "scenario": "N1 small messy export",
+        "exit": 0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.01
+      },
+      {
+        "scenario": "N2 brand, misspellings, competitors",
+        "exit": 0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "N3 ambiguous intent + 90-day clearance",
+        "exit": 0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "N4 UTF-16 Excel export, non-English, duplicates",
+        "exit": 0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "N5 large account (3,000 rows)",
+        "exit": 0,
+        "tp": 705,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.06
+      }
+    ]
+  },
+  "audit": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "usefulness": 1.0,
+    "clarity_grade": 3.2,
+    "em_dashes": 0,
+    "seconds_large": 0.0,
+    "scenarios": [
+      {
+        "scenario": "A1 small account",
+        "exit": 0,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "A2 messy UTF-16 export, PMax, policy-limited",
+        "exit": 0,
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "A3 large account (60 campaigns)",
+        "exit": 0,
+        "tp": 34,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      }
+    ]
+  },
+  "weekly": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "usefulness": 1.0,
+    "clarity_grade": 3.8,
+    "em_dashes": 0,
+    "seconds_large": 0.0,
+    "scenarios": [
+      {
+        "scenario": "W1 typical week",
+        "exit": 0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "W2 tracking break",
+        "exit": 0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "W3 planned 20% step down",
+        "exit": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "W4 segmented rows and a renamed campaign",
+        "exit": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      },
+      {
+        "scenario": "W5 large account (80 campaigns)",
+        "exit": 0,
+        "tp": 38,
+        "fp": 0,
+        "fn": 0,
+        "false_positives": [],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      }
+    ]
+  },
+  "bad_inputs": {
+    "handled": 1.0,
+    "scenarios": [
+      {
+        "scenario": "negatives: campaigns file instead of search terms",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: this does not look like a Google Ads Search terms export: no header row with all of [search term, campaign, ad group, clicks, cost, conversions] in the"
+      },
+      {
+        "scenario": "negatives: empty file",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: this does not look like a Google Ads Search terms export: no header row with all of [search term, campaign, ad group, clicks, cost, conversions] in the"
+      },
+      {
+        "scenario": "negatives: binary junk (xlsx)",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: this is not a CSV file (it looks like a binary or Excel .xlsx file). In Google Ads, download the Search terms report as .csv"
+      },
+      {
+        "scenario": "negatives: header only",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: the Search terms export has a header but no data rows"
+      },
+      {
+        "scenario": "negatives: missing thresholds",
+        "exit": 2,
+        "handled": true,
+        "message": "REFUSING to decide anything. The thresholds are the account owner's to set and none has a default. Missing: --min-clicks, --target-cpa, --target-cpa-multiple"
+      },
+      {
+        "scenario": "negatives: clearance shorter than main",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: the clearance export covers 7 days but the main export covers 30. The clearance file must cover the longer range."
+      },
+      {
+        "scenario": "negatives: file does not exist",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: cannot open /tmp/gads-eval-epl0b479/nope.csv: No such file or directory"
+      },
+      {
+        "scenario": "negatives: bad number in cost",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: not a number: 'sixty'"
+      },
+      {
+        "scenario": "audit: search terms file as campaigns",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: this is a Google Ads Search terms export, not a Campaigns export"
+      },
+      {
+        "scenario": "audit: no target CPA",
+        "exit": 2,
+        "handled": true,
+        "message": "REFUSED: --target-cpa is required. It is the owner's number; the audit will not judge cost per conversion without it."
+      },
+      {
+        "scenario": "weekly: same file for both weeks",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: both files cover the same dates. Upload last week and this week."
+      },
+      {
+        "scenario": "weekly: 30 days vs 7 days",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: the two weeks cover different lengths (7 and 30 days). Export the same number of days for both."
+      },
+      {
+        "scenario": "weekly: pacing without budget",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: pacing needs --month-budget (the owner's stated figure) and --as-of"
+      },
+      {
+        "scenario": "weekly: bad as-of date",
+        "exit": 3,
+        "handled": true,
+        "message": "REFUSED: Invalid isoformat string: 'Oct 11'"
+      }
+    ]
+  },
+  "holdout": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "clarity_grade": 4.1,
+    "em_dashes": 0,
+    "seconds_large": 0.0,
+    "scenarios": [
+      {
+        "scenario": "H1 hold-out: hard search terms",
+        "exit": 0,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "false_positives": [
+          "Search - Generic - Invoicing | Software | akmi invoice"
+        ],
+        "misses": [],
+        "error": "",
+        "seconds": 0.0
+      }
+    ]
+  },
+  "completed": 1.0,
+  "incomplete": [],
+  "verdicts": {
+    "negatives precision": {
+      "value": 1.0,
+      "threshold": ">= 0.95",
+      "pass": true
+    },
+    "negatives recall": {
+      "value": 1.0,
+      "threshold": ">= 0.9",
+      "pass": true
+    },
+    "audit precision": {
+      "value": 1.0,
+      "threshold": ">= 0.9",
+      "pass": true
+    },
+    "audit recall": {
+      "value": 1.0,
+      "threshold": ">= 0.9",
+      "pass": true
+    },
+    "audit usefulness": {
+      "value": 1.0,
+      "threshold": ">= 0.95",
+      "pass": true
+    },
+    "weekly precision": {
+      "value": 1.0,
+      "threshold": ">= 0.9",
+      "pass": true
+    },
+    "weekly recall": {
+      "value": 1.0,
+      "threshold": ">= 0.9",
+      "pass": true
+    },
+    "weekly usefulness": {
+      "value": 1.0,
+      "threshold": ">= 0.95",
+      "pass": true
+    },
+    "negatives clarity grade": {
+      "value": 4.1,
+      "threshold": "<= 9.0",
+      "pass": true
+    },
+    "audit clarity grade": {
+      "value": 3.2,
+      "threshold": "<= 9.0",
+      "pass": true
+    },
+    "weekly clarity grade": {
+      "value": 3.8,
+      "threshold": "<= 9.0",
+      "pass": true
+    },
+    "em dashes in outputs": {
+      "value": 0,
+      "threshold": "<= 0",
+      "pass": true
+    },
+    "bad inputs handled": {
+      "value": 1.0,
+      "threshold": ">= 1.0",
+      "pass": true
+    },
+    "valid scenarios completed": {
+      "value": 1.0,
+      "threshold": ">= 1.0",
+      "pass": true
+    },
+    "large-account seconds": {
+      "value": 0.06,
+      "threshold": "<= 10.0",
+      "pass": true
+    }
+  }
+}

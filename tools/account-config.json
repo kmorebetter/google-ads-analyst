@@ -1,0 +1,148 @@
+{
+  "_comment": [
+    "Single source for every account and calendar constant the builders use.",
+    "Loaded by tools/account_config.py. Numbers that feed Decimal arithmetic are strings so json floats never touch them.",
+    "THIS FILE SHIPS WITH SYNTHETIC EXAMPLE VALUES for a made-up company (Acme Software).",
+    "Run the account-setup skill to replace every value with your own account facts before a live run.",
+    "Drift guards: test_account_config.py asserts the stated figures here match budget-plan.md. Update both together.",
+    "Stated budgets are READ from the owner's figures, never derived (campaign-guardrails rule 8). A month with no stated Google Ads split stays null with its reason."
+  ],
+  "customer_id": "1234567890",
+  "currency": "CAD",
+  "conversion_actions": {
+    "eight": [
+      "Basic Trial Signup",
+      "Pro Trial Signup",
+      "Plus Trial Signup",
+      "Business Trial Signup",
+      "Basic Annual Signup",
+      "Pro Annual Signup",
+      "Plus Annual Signup",
+      "Business Annual Signup"
+    ],
+    "priority": [
+      "Business Trial Signup",
+      "Business Annual Signup"
+    ]
+  },
+  "campaign_buckets": {
+    "_comment": "IDs, never names: a word like 'Brand' in a name can also match non-brand campaigns. Synthetic example IDs.",
+    "brand_campaign_ids": {
+      "71000000001": "Search - Brand - Core",
+      "71000000002": "Search - Brand - tROAS",
+      "71000000003": "Search - Brand - Competitor Defense"
+    },
+    "brand_core_campaign_id": "71000000001",
+    "tof_campaign_ids": {
+      "71000000004": "Video - Awareness - US",
+      "71000000005": "Demand Gen - Prospecting"
+    },
+    "tof_channels": [
+      "VIDEO",
+      "DEMAND_GEN"
+    ],
+    "legacy_campaign_ids": {
+      "71000000006": "Webinar 2024 - Form Submits",
+      "71000000007": "Search - Conquest - Old Landing Page"
+    },
+    "brand_tokens": [
+      "acme",
+      "acme software",
+      "acmesoftware",
+      "acme app"
+    ],
+    "conquest_tokens": [
+      "conquest",
+      "competitor",
+      "competitive",
+      "rivalco",
+      "widgetpro"
+    ]
+  },
+  "budgets": {
+    "fx_usd_to_cad": "1.36",
+    "fx_note": "flat example rate; set your own in account-setup",
+    "no_split_reason": "no stated Google Ads split for this month in budget-plan.md. Ask the account owner. Never derive it from a share of the all-channel total, and never carry another month's figure forward (campaign-guardrails rule 8)",
+    "months": {
+      "2026-07": {
+        "cad": null,
+        "usd": null
+      },
+      "2026-08": {
+        "cad": "54400",
+        "usd": "40000",
+        "source": "budget-plan.md, 'Google Ads budget' table: the owner's stated figure"
+      },
+      "2026-09": {
+        "cad": null,
+        "usd": null
+      },
+      "2026-10": {
+        "cad": null,
+        "usd": null
+      },
+      "2026-11": {
+        "cad": null,
+        "usd": null
+      },
+      "2026-12": {
+        "cad": null,
+        "usd": null
+      }
+    },
+    "planned_step_down": {
+      "pct": "12.5",
+      "window": "Aug 2026 vs Jul 2026",
+      "note": "the PLANNED month-over-month budget step down. The plan, never a finding (campaign-guardrails rule 8)."
+    },
+    "elasticity_bands": [
+      {
+        "name": "band_1",
+        "max_increase_usd_per_month": "10000",
+        "cpa_degradation_pct": "0",
+        "note": "understood to be efficient"
+      },
+      {
+        "name": "band_2",
+        "max_increase_usd_per_month": "20000",
+        "cpa_degradation_pct": "12",
+        "note": "roughly 12% CPA degradation"
+      },
+      {
+        "name": "band_3",
+        "max_increase_usd_per_month": null,
+        "cpa_degradation_pct": null,
+        "note": "above USD 20,000/month no data exists - do not recommend"
+      }
+    ],
+    "elasticity_scope": "monthly Google Ads budget increase, account-wide, from budget-plan.md",
+    "cac_anchor": {
+      "month": "2026-04",
+      "month_label": "April 2026",
+      "month_short": "Apr 2026",
+      "month_slug": "april_2026",
+      "cac_usd": "310.40",
+      "cost_per_free_trial_usd": "142.75",
+      "source": "budget-plan.md, CAC table: real customers and real free trials"
+    }
+  },
+  "thresholds": {
+    "lost_is_budget_constrained_gate": "0.30",
+    "lost_is_budget_exposure_gate": "0.20",
+    "lost_is_rank_gate": "0.20",
+    "wow_move_pct": "15",
+    "target_gap_pct": "15",
+    "pacing_band_pct": "10",
+    "abs_top_is_brand_core_floor": "0.40",
+    "conversion_floor": 5,
+    "serve_table_top_n": 10,
+    "serve_table_min_cost_cad": "2000",
+    "learning_days_search": 14,
+    "learning_days_pmax": 28,
+    "conversion_integrity_band_pct": [
+      "10",
+      "50"
+    ],
+    "conversion_integrity_wow_move_pp": "10"
+  }
+}

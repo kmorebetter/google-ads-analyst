@@ -1,0 +1,431 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,campaign.name,adGroup.id,adGroup.name,searchTermView.searchTerm,searchTermView.status,segments.keyword.info.text,segments.keyword.info.matchType,segments.keyword.adGroupCriterion,metrics.costMicros,metrics.clicks,metrics.impressions",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "negate-me",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw alpha",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000001"
+          }
+        },
+        "metrics": {
+          "costMicros": "400000000",
+          "clicks": "20",
+          "impressions": "600"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "kept-by-90d",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw alpha",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000001"
+          }
+        },
+        "metrics": {
+          "costMicros": "500000000",
+          "clicks": "25",
+          "impressions": "750"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "held-thin-clicks",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw beta",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000002"
+          }
+        },
+        "metrics": {
+          "costMicros": "300000000",
+          "clicks": "2",
+          "impressions": "60"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "below-floor",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw beta",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000002"
+          }
+        },
+        "metrics": {
+          "costMicros": "10000000",
+          "clicks": "1",
+          "impressions": "30"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "added-keyword",
+          "status": "ADDED"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "added-keyword",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000003"
+          }
+        },
+        "metrics": {
+          "costMicros": "900000000",
+          "clicks": "40",
+          "impressions": "1200"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "excluded-already",
+          "status": "EXCLUDED"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw beta",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000002"
+          }
+        },
+        "metrics": {
+          "costMicros": "150000000",
+          "clicks": "8",
+          "impressions": "240"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic campaign 70000000001"
+        },
+        "adGroup": {
+          "id": "90000002",
+          "name": "Synthetic ad group 90000002"
+        },
+        "searchTermView": {
+          "searchTerm": "converts-now",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw brand",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000002~50000004"
+          }
+        },
+        "metrics": {
+          "costMicros": "200000000",
+          "clicks": "15",
+          "impressions": "450"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "over-cut-line",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw alpha",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000001"
+          }
+        },
+        "metrics": {
+          "costMicros": "4000000000",
+          "clicks": "30",
+          "impressions": "900"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "dup-identity",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw gamma",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000005"
+          }
+        },
+        "metrics": {
+          "costMicros": "260000000",
+          "clicks": "12",
+          "impressions": "360"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "dup-identity",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw delta",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000006"
+          }
+        },
+        "metrics": {
+          "costMicros": "140000000",
+          "clicks": "6",
+          "impressions": "180"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic campaign 70000000001"
+        },
+        "adGroup": {
+          "id": "90000002",
+          "name": "Synthetic ad group 90000002"
+        },
+        "searchTermView": {
+          "searchTerm": "reused-criterion",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw alpha",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000002~50000001"
+          }
+        },
+        "metrics": {
+          "costMicros": "320000000",
+          "clicks": "14",
+          "impressions": "420"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "impossible-row",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw beta",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000002"
+          }
+        },
+        "metrics": {
+          "costMicros": "120000000",
+          "clicks": "9",
+          "impressions": "3"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "filler-one",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw beta",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000002"
+          }
+        },
+        "metrics": {
+          "costMicros": "700000000",
+          "clicks": "22",
+          "impressions": "660"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic campaign 70000000001"
+        },
+        "adGroup": {
+          "id": "90000002",
+          "name": "Synthetic ad group 90000002"
+        },
+        "searchTermView": {
+          "searchTerm": "filler-two",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw brand",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000002~50000004"
+          }
+        },
+        "metrics": {
+          "costMicros": "640000000",
+          "clicks": "19",
+          "impressions": "570"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic campaign 70000000002"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "filler-three",
+          "status": "NONE"
+        },
+        "segments": {
+          "keyword": {
+            "info": {
+              "text": "kw gamma",
+              "matchType": "BROAD"
+            },
+            "adGroupCriterion": "customers/9999999999/adGroupCriteria/90000001~50000005"
+          }
+        },
+        "metrics": {
+          "costMicros": "580000000",
+          "clicks": "17",
+          "impressions": "510"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

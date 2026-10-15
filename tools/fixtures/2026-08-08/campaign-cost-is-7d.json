@@ -1,0 +1,101 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,metrics.costMicros,metrics.impressions,metrics.clicks,metrics.searchImpressionShare,metrics.searchBudgetLostImpressionShare,metrics.searchRankLostImpressionShare,metrics.searchAbsoluteTopImpressionShare,metrics.searchTopImpressionShare",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000001"
+        },
+        "metrics": {
+          "costMicros": "90000000",
+          "impressions": "1800",
+          "clicks": "22",
+          "searchImpressionShare": 0.42,
+          "searchBudgetLostImpressionShare": 0.05,
+          "searchRankLostImpressionShare": 0.3,
+          "searchAbsoluteTopImpressionShare": 0.41,
+          "searchTopImpressionShare": 0.6
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "metrics": {
+          "costMicros": "380000000",
+          "impressions": "7600",
+          "clicks": "95",
+          "searchImpressionShare": 0.42,
+          "searchBudgetLostImpressionShare": 0.05,
+          "searchRankLostImpressionShare": 0.3,
+          "searchAbsoluteTopImpressionShare": 0.41,
+          "searchTopImpressionShare": 0.6
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000003"
+        },
+        "metrics": {
+          "costMicros": "520000000",
+          "impressions": "10400",
+          "clicks": "130",
+          "searchImpressionShare": 0.0999,
+          "searchBudgetLostImpressionShare": 0.55,
+          "searchRankLostImpressionShare": 0.3,
+          "searchAbsoluteTopImpressionShare": 0.41,
+          "searchTopImpressionShare": 0.6
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000004"
+        },
+        "metrics": {
+          "costMicros": "40000000",
+          "impressions": "800",
+          "clicks": "10",
+          "searchImpressionShare": 0.42,
+          "searchBudgetLostImpressionShare": 0.05,
+          "searchRankLostImpressionShare": 0.3,
+          "searchAbsoluteTopImpressionShare": 0.41,
+          "searchTopImpressionShare": 0.6
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000006"
+        },
+        "metrics": {
+          "costMicros": "150000000",
+          "impressions": "3000",
+          "clicks": "37",
+          "searchImpressionShare": 0.42,
+          "searchBudgetLostImpressionShare": 0.05,
+          "searchRankLostImpressionShare": 0.3,
+          "searchAbsoluteTopImpressionShare": 0.41,
+          "searchTopImpressionShare": 0.6
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000007"
+        },
+        "metrics": {
+          "costMicros": "30000000",
+          "impressions": "600",
+          "clicks": "7",
+          "searchImpressionShare": 0.42,
+          "searchBudgetLostImpressionShare": 0.05,
+          "searchRankLostImpressionShare": 0.3,
+          "searchAbsoluteTopImpressionShare": 0.41,
+          "searchTopImpressionShare": 0.6
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

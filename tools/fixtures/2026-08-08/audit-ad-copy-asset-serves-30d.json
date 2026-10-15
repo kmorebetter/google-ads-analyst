@@ -1,0 +1,267 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,adGroup.id,adGroupAd.resourceName,adGroupAd.ad.id,asset.id,asset.textAsset.text,adGroupAdAssetView.fieldType,adGroupAdAssetView.performanceLabel,metrics.impressions,metrics.clicks",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001"
+          }
+        },
+        "asset": {
+          "id": "50000000001",
+          "textAsset": {
+            "text": "Synthetic headline alpha 60000000001"
+          },
+          "resourceName": "customers/9999999999/assets/50000000001"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000003~60000000001~50000000001~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "900",
+          "clicks": "40"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001"
+          }
+        },
+        "asset": {
+          "id": "50000000002",
+          "textAsset": {
+            "text": "Synthetic headline beta 60000000001"
+          },
+          "resourceName": "customers/9999999999/assets/50000000002"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000003~60000000001~50000000002~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "300",
+          "clicks": "9"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001"
+          }
+        },
+        "asset": {
+          "id": "50000000003",
+          "textAsset": {
+            "text": "Synthetic headline gamma 60000000001"
+          },
+          "resourceName": "customers/9999999999/assets/50000000003"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000003~60000000001~50000000003~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "100",
+          "clicks": "2"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001"
+          }
+        },
+        "asset": {
+          "id": "50000000004",
+          "textAsset": {
+            "text": "Synthetic removed headline 60000000001"
+          },
+          "resourceName": "customers/9999999999/assets/50000000004"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000003~60000000001~50000000004~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "250",
+          "clicks": "7"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000002",
+          "ad": {
+            "id": "60000000002"
+          }
+        },
+        "asset": {
+          "id": "50000000005",
+          "textAsset": {
+            "text": "Synthetic headline alpha 60000000002"
+          },
+          "resourceName": "customers/9999999999/assets/50000000005"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000003~60000000002~50000000005~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "700",
+          "clicks": "30"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000002",
+          "ad": {
+            "id": "60000000002"
+          }
+        },
+        "asset": {
+          "id": "50000000006",
+          "textAsset": {
+            "text": "Synthetic headline beta 60000000002"
+          },
+          "resourceName": "customers/9999999999/assets/50000000006"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000003~60000000002~50000000006~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "200",
+          "clicks": "5"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "resourceName": "customers/9999999999/campaigns/70000000001"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000012",
+          "ad": {
+            "id": "60000000012"
+          }
+        },
+        "asset": {
+          "id": "50000000007",
+          "textAsset": {
+            "text": "Synthetic headline alpha 60000000012"
+          },
+          "resourceName": "customers/9999999999/assets/50000000007"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000004~60000000012~50000000007~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "80",
+          "clicks": "1"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "resourceName": "customers/9999999999/campaigns/70000000001"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000012",
+          "ad": {
+            "id": "60000000012"
+          }
+        },
+        "asset": {
+          "id": "50000000008",
+          "textAsset": {
+            "text": "Synthetic headline beta 60000000012"
+          },
+          "resourceName": "customers/9999999999/assets/50000000008"
+        },
+        "adGroupAdAssetView": {
+          "fieldType": "HEADLINE",
+          "performanceLabel": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAdAssetViews/90000004~60000000012~50000000008~HEADLINE"
+        },
+        "metrics": {
+          "impressions": "0",
+          "clicks": "0"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

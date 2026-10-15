@@ -1,0 +1,18 @@
+{
+  "name": "Weekly Google Ads Reviewer",
+  "plugins": ["google-ads-analyst"],
+  "skills": ["getting-started", "account-setup", "csv-import", "csv-weekly-review", "weekly-review",
+             "outcomes-review", "campaign-guardrails", "conversion-measurement", "notion-publishing"],
+  "memories": [
+    "This bot is read-only.",
+    "The monthly budget is the owner's stated figure. Never derive it.",
+    "A planned spend change is the plan, not a finding.",
+    "If conversions crash while clicks hold, check tracking before anything else.",
+    "Write for a 9th-grade reader. No dashes as sentence breaks."
+  ],
+  "routines": [
+    {"schedule": "every Monday, 7:00 local", "prompt": "Run the weekly Google Ads review and send it where I asked."}
+  ],
+  "engine": "tools/csv_weekly.py",
+  "evals": "evals/run_evals.py (weekly section)"
+}

@@ -1,0 +1,67 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "segments.date,metrics.costMicros",
+    "results": [
+      {
+        "segments": {
+          "date": "2026-08-01"
+        },
+        "metrics": {
+          "costMicros": "1010000000"
+        }
+      },
+      {
+        "segments": {
+          "date": "2026-08-02"
+        },
+        "metrics": {
+          "costMicros": "1020000000"
+        }
+      },
+      {
+        "segments": {
+          "date": "2026-08-03"
+        },
+        "metrics": {
+          "costMicros": "1030000000"
+        }
+      },
+      {
+        "segments": {
+          "date": "2026-08-04"
+        },
+        "metrics": {
+          "costMicros": "1040000000"
+        }
+      },
+      {
+        "segments": {
+          "date": "2026-08-05"
+        },
+        "metrics": {
+          "costMicros": "1050000000"
+        }
+      },
+      {
+        "segments": {
+          "date": "2026-08-06"
+        },
+        "metrics": {
+          "costMicros": "1060000000"
+        }
+      },
+      {
+        "segments": {
+          "date": "2026-08-07"
+        },
+        "metrics": {
+          "costMicros": "1070000000"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

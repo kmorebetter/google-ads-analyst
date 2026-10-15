@@ -1,0 +1,633 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,campaign.name,campaign.status,campaign.advertisingChannelType,adGroup.id,adGroup.name,adGroup.status,adGroupAd.status,adGroupAd.adStrength,adGroupAd.resourceName,adGroupAd.ad.id,adGroupAd.ad.finalUrls,adGroupAd.ad.responsiveSearchAd.headlines,adGroupAd.ad.responsiveSearchAd.descriptions,adGroupAd.policySummary.approvalStatus,adGroupAd.policySummary.policyTopicEntries",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000001"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000001"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000001"
+                },
+                {
+                  "text": "Synthetic dead slot 60000000001"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000001"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000001"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000002",
+          "ad": {
+            "id": "60000000002",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000002"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000002"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000002"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000002"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000002"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000003",
+          "ad": {
+            "id": "60000000003",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000003"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000003"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000003"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000003"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000003"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000004",
+          "ad": {
+            "id": "60000000004",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000004"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000004"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000004"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000004"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000004"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000005",
+          "ad": {
+            "id": "60000000005",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000005"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000005"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000005"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000005"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000005"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000006",
+          "ad": {
+            "id": "60000000006",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000006"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000006"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000006"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000006"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000006"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000007",
+          "ad": {
+            "id": "60000000007",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000007"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000007"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000007"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000007"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000007"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000008",
+          "ad": {
+            "id": "60000000008",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000008"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000008"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000008"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000008"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000008"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000009",
+          "ad": {
+            "id": "60000000009",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000009"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000009"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000009"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000009"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000009"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "name": "Synthetic RSA Group",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000010",
+          "ad": {
+            "id": "60000000010",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000010"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000010"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000010"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000010"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000010"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic - Search - Brand - Core",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000001"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "name": "Synthetic RSA Group Two",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000011",
+          "ad": {
+            "id": "60000000011",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000011"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000011"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000011"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000011"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000011"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic - Search - Brand - Core",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000001"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "name": "Synthetic RSA Group Two",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000012",
+          "ad": {
+            "id": "60000000012",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000012"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000012"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000012"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000012"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000012"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "name": "Synthetic - Search - Brand - Core",
+          "status": "ENABLED",
+          "advertisingChannelType": "SEARCH",
+          "resourceName": "customers/9999999999/campaigns/70000000001"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "name": "Synthetic RSA Group Two",
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "adStrength": "GOOD",
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000013",
+          "ad": {
+            "id": "60000000013",
+            "finalUrls": [
+              "https://example.invalid/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Synthetic headline alpha 60000000013"
+                },
+                {
+                  "text": "Synthetic headline beta 60000000013"
+                },
+                {
+                  "text": "Synthetic headline gamma 60000000013"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Synthetic description one for ad 60000000013"
+                },
+                {
+                  "text": "Synthetic description two for ad 60000000013"
+                }
+              ]
+            }
+          },
+          "policySummary": {
+            "approvalStatus": "APPROVED_LIMITED",
+            "policyTopicEntries": [
+              {
+                "topic": "TRADEMARK_IN_AD_TEXT_SPECIFICS"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

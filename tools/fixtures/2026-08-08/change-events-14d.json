@@ -1,0 +1,59 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "changeEvent.changeDateTime,changeEvent.changeResourceType,changeEvent.resourceChangeOperation,changeEvent.changedFields,changeEvent.campaign,changeEvent.adGroup,changeEvent.userEmail,changeEvent.clientType",
+    "results": [
+      {
+        "changeEvent": {
+          "resourceName": "customers/9999999999/changeEvents/70000000003~2026-08-06",
+          "changeDateTime": "2026-08-06 12:00:00.000000",
+          "changeResourceType": "CAMPAIGN_BUDGET",
+          "resourceChangeOperation": "UPDATE",
+          "changedFields": "amountMicros",
+          "campaign": "customers/9999999999/campaigns/70000000003",
+          "userEmail": "synthetic.operator@example.invalid",
+          "clientType": "GOOGLE_ADS_WEB_CLIENT"
+        }
+      },
+      {
+        "changeEvent": {
+          "resourceName": "customers/9999999999/changeEvents/70000000002~2026-08-05",
+          "changeDateTime": "2026-08-05 12:00:00.000000",
+          "changeResourceType": "CAMPAIGN",
+          "resourceChangeOperation": "UPDATE",
+          "changedFields": "maximizeConversionValue.targetRoas",
+          "campaign": "customers/9999999999/campaigns/70000000002",
+          "userEmail": "synthetic.operator@example.invalid",
+          "clientType": "GOOGLE_ADS_WEB_CLIENT"
+        }
+      },
+      {
+        "changeEvent": {
+          "resourceName": "customers/9999999999/changeEvents/70000000001~2026-08-02",
+          "changeDateTime": "2026-08-02 12:00:00.000000",
+          "changeResourceType": "CAMPAIGN_BUDGET",
+          "resourceChangeOperation": "UPDATE",
+          "changedFields": "amountMicros",
+          "campaign": "customers/9999999999/campaigns/70000000001",
+          "userEmail": "synthetic.operator@example.invalid",
+          "clientType": "GOOGLE_ADS_WEB_CLIENT"
+        }
+      },
+      {
+        "changeEvent": {
+          "resourceName": "customers/9999999999/changeEvents/70000000002~2026-08-04",
+          "changeDateTime": "2026-08-04 12:00:00.000000",
+          "changeResourceType": "AD_GROUP_CRITERION",
+          "resourceChangeOperation": "UPDATE",
+          "changedFields": "keyword.text",
+          "campaign": "customers/9999999999/campaigns/70000000002",
+          "userEmail": "synthetic.second@example.invalid",
+          "clientType": "GOOGLE_ADS_WEB_CLIENT"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

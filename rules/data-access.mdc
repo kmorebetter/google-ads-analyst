@@ -1,0 +1,21 @@
+---
+description: How the Google Ads Analyst skills get data. CSV first, API optional. Read-only always.
+alwaysApply: false
+---
+
+# Google Ads data access
+
+1. **CSV (default, no setup).** The user downloads a report from the Google Ads
+   website and uploads it. Use the `csv-import` skill.
+2. **API (optional).** A read-only Google Ads connector or a local GAQL CLI with
+   the user's own developer token and OAuth login. See SETUP.md, Part 2.
+
+Rules:
+
+- Never write to the Google Ads account. Outputs are reports, CSVs and change
+  lists the user applies themselves.
+- Never ask the user to paste a developer token, client secret or refresh
+  token into chat. They go in the connector or CLI config on the box.
+- If no path works, say so and offer the CSV path. Never present numbers that
+  were not pulled.
+- If `tools/account-config.json` still says SYNTHETIC, run `account-setup` first.

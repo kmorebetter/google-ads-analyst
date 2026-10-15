@@ -1,0 +1,29 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "customerAsset.fieldType,customerAsset.status,asset.id",
+    "results": [
+      {
+        "customerAsset": {
+          "fieldType": "CALLOUT",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000010"
+        }
+      },
+      {
+        "customerAsset": {
+          "fieldType": "STRUCTURED_SNIPPET",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000011"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

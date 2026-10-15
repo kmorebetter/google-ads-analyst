@@ -1,0 +1,310 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,adGroup.id,adGroupAd.resourceName,adGroupAd.ad.id,metrics.costMicros,metrics.impressions,metrics.clicks",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001"
+          }
+        },
+        "metrics": {
+          "costMicros": "3000000000",
+          "impressions": "400",
+          "clicks": "12"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000002",
+          "ad": {
+            "id": "60000000002"
+          }
+        },
+        "metrics": {
+          "costMicros": "2900000000",
+          "impressions": "800",
+          "clicks": "24"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000003",
+          "ad": {
+            "id": "60000000003"
+          }
+        },
+        "metrics": {
+          "costMicros": "2800000000",
+          "impressions": "1200",
+          "clicks": "36"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000004",
+          "ad": {
+            "id": "60000000004"
+          }
+        },
+        "metrics": {
+          "costMicros": "2700000000",
+          "impressions": "1600",
+          "clicks": "48"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000005",
+          "ad": {
+            "id": "60000000005"
+          }
+        },
+        "metrics": {
+          "costMicros": "2600000000",
+          "impressions": "2000",
+          "clicks": "60"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000006",
+          "ad": {
+            "id": "60000000006"
+          }
+        },
+        "metrics": {
+          "costMicros": "2500000000",
+          "impressions": "2400",
+          "clicks": "72"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000007",
+          "ad": {
+            "id": "60000000007"
+          }
+        },
+        "metrics": {
+          "costMicros": "2400000000",
+          "impressions": "2800",
+          "clicks": "84"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000008",
+          "ad": {
+            "id": "60000000008"
+          }
+        },
+        "metrics": {
+          "costMicros": "2300000000",
+          "impressions": "3200",
+          "clicks": "96"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000009",
+          "ad": {
+            "id": "60000000009"
+          }
+        },
+        "metrics": {
+          "costMicros": "2200000000",
+          "impressions": "3600",
+          "clicks": "108"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000010",
+          "ad": {
+            "id": "60000000010"
+          }
+        },
+        "metrics": {
+          "costMicros": "2100000000",
+          "impressions": "4000",
+          "clicks": "120"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "resourceName": "customers/9999999999/campaigns/70000000001",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000011",
+          "ad": {
+            "id": "60000000011"
+          }
+        },
+        "metrics": {
+          "costMicros": "2050000000",
+          "impressions": "4400",
+          "clicks": "132"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "resourceName": "customers/9999999999/campaigns/70000000001",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000012",
+          "ad": {
+            "id": "60000000012"
+          }
+        },
+        "metrics": {
+          "costMicros": "150000000",
+          "impressions": "4800",
+          "clicks": "144"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001",
+          "resourceName": "customers/9999999999/campaigns/70000000001",
+          "status": "ENABLED"
+        },
+        "adGroup": {
+          "id": "90000004",
+          "resourceName": "customers/9999999999/adGroups/90000004"
+        },
+        "adGroupAd": {
+          "status": "ENABLED",
+          "resourceName": "customers/9999999999/adGroupAds/90000004~60000000013",
+          "ad": {
+            "id": "60000000013"
+          }
+        },
+        "metrics": {
+          "costMicros": "90000000",
+          "impressions": "5200",
+          "clicks": "156"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

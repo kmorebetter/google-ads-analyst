@@ -1,0 +1,31 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,campaign.name,adGroup.id,adGroup.name,searchTermView.searchTerm,segments.conversionActionName,metrics.conversions,metrics.conversionsValue",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002",
+          "name": "Synthetic - Search - Generic - Features"
+        },
+        "adGroup": {
+          "id": "90000001",
+          "name": "Synthetic ad group 90000001"
+        },
+        "searchTermView": {
+          "searchTerm": "kept-by-90d"
+        },
+        "segments": {
+          "conversionActionName": "Basic Trial Signup"
+        },
+        "metrics": {
+          "conversions": 1,
+          "conversionsValue": 350
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

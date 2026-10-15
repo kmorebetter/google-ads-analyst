@@ -1,0 +1,71 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,segments.conversionActionName,metrics.conversions,metrics.conversionsValue",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000001"
+        },
+        "segments": {
+          "conversionActionName": "Basic Trial Signup"
+        },
+        "metrics": {
+          "conversions": 8,
+          "conversionsValue": 2800
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "segments": {
+          "conversionActionName": "Basic Trial Signup"
+        },
+        "metrics": {
+          "conversions": 3,
+          "conversionsValue": 1050
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "segments": {
+          "conversionActionName": "Business Trial Signup"
+        },
+        "metrics": {
+          "conversions": 1,
+          "conversionsValue": 1700
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000003"
+        },
+        "segments": {
+          "conversionActionName": "Plus Trial Signup"
+        },
+        "metrics": {
+          "conversions": 6,
+          "conversionsValue": 6000
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000006"
+        },
+        "segments": {
+          "conversionActionName": "Pro Trial Signup"
+        },
+        "metrics": {
+          "conversions": 1,
+          "conversionsValue": 700
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

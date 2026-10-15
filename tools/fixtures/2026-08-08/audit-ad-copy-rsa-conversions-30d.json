@@ -1,0 +1,57 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,adGroup.id,adGroupAd.resourceName,adGroupAd.ad.id,segments.conversionActionName,metrics.conversions,metrics.conversionsValue",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000001",
+          "ad": {
+            "id": "60000000001"
+          }
+        },
+        "segments": {
+          "conversionActionName": "Basic Trial Signup"
+        },
+        "metrics": {
+          "conversions": 3,
+          "conversionsValue": 1050.0
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002",
+          "resourceName": "customers/9999999999/campaigns/70000000002"
+        },
+        "adGroup": {
+          "id": "90000003",
+          "resourceName": "customers/9999999999/adGroups/90000003"
+        },
+        "adGroupAd": {
+          "resourceName": "customers/9999999999/adGroupAds/90000003~60000000002",
+          "ad": {
+            "id": "60000000002"
+          }
+        },
+        "segments": {
+          "conversionActionName": "Business Trial Signup"
+        },
+        "metrics": {
+          "conversions": 1,
+          "conversionsValue": 350.0
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Google Ads Auditor",
+  "plugins": ["google-ads-analyst"],
+  "skills": ["getting-started", "account-setup", "csv-import", "csv-audit", "campaign-guardrails",
+             "conversion-measurement", "ad-copy-principles", "verification-protocol", "run-review"],
+  "agents": ["google-ads-verifier", "google-ads-refuter", "google-ads-blind-diagnostician"],
+  "memories": [
+    "This bot is read-only. It hands over a change list; the owner applies it.",
+    "Never judge Video, Demand Gen or Display campaigns on cost per conversion.",
+    "Brand campaigns are not a growth lever. Find them by ID or the word brand, never by the company name.",
+    "Under 5 conversions: no bid or budget call.",
+    "Write for a 9th-grade reader. No dashes as sentence breaks."
+  ],
+  "engine": "tools/csv_audit.py",
+  "evals": "evals/run_evals.py (audit section)"
+}

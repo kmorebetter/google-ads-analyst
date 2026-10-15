@@ -1,0 +1,83 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,campaignAsset.fieldType,campaignAsset.status,asset.id",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000001"
+        },
+        "campaignAsset": {
+          "fieldType": "SITELINK",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000001"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "campaignAsset": {
+          "fieldType": "SITELINK",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000001"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "campaignAsset": {
+          "fieldType": "CALLOUT",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000002"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "campaignAsset": {
+          "fieldType": "PRICE",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000003"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000003"
+        },
+        "campaignAsset": {
+          "fieldType": "SITELINK",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000001"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000099"
+        },
+        "campaignAsset": {
+          "fieldType": "SITELINK",
+          "status": "ENABLED"
+        },
+        "asset": {
+          "id": "60000004"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}

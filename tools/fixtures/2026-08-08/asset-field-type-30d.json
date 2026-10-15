@@ -1,0 +1,76 @@
+{
+  "action": "post",
+  "data": {
+    "fieldMask": "campaign.id,assetFieldTypeView.fieldType,metrics.impressions,metrics.clicks,metrics.costMicros",
+    "results": [
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "assetFieldTypeView": {
+          "fieldType": "SITELINK"
+        },
+        "metrics": {
+          "impressions": "5000",
+          "clicks": "300",
+          "costMicros": "500000000"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "assetFieldTypeView": {
+          "fieldType": "CALLOUT"
+        },
+        "metrics": {
+          "impressions": "4000",
+          "clicks": "250",
+          "costMicros": "400000000"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "assetFieldTypeView": {
+          "fieldType": "STRUCTURED_SNIPPET"
+        },
+        "metrics": {
+          "impressions": "20",
+          "clicks": "1",
+          "costMicros": "2000000"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000002"
+        },
+        "assetFieldTypeView": {
+          "fieldType": "PRICE"
+        },
+        "metrics": {
+          "impressions": "900",
+          "clicks": "40",
+          "costMicros": "90000000"
+        }
+      },
+      {
+        "campaign": {
+          "id": "70000000001"
+        },
+        "assetFieldTypeView": {
+          "fieldType": "SITELINK"
+        },
+        "metrics": {
+          "impressions": "3000",
+          "clicks": "400",
+          "costMicros": "300000000"
+        }
+      }
+    ]
+  },
+  "path": "/v22/customers/9999999999/googleAds:search",
+  "status": 200,
+  "success": true
+}
