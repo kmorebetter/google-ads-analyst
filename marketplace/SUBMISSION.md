@@ -1,5 +1,13 @@
 # Submission-ready summary (NOT submitted)
 
+## Grok Bot (primary target)
+Grok Bot installs plugins straight from a public GitHub repo. It reads
+`.cursor-plugin/marketplace.json` (source `./`) and `.cursor-plugin/plugin.json`.
+Install line for buyers: "install the plugin from github.com/kmorebetter/google-ads-analyst".
+No submission form is needed for that path.
+
+## Cursor marketplace (optional, secondary)
+
 Submit in a browser at: **https://cursor.com/marketplace/publish**
 
 ## Field values
@@ -11,12 +19,13 @@ Submit in a browser at: **https://cursor.com/marketplace/publish**
 | Display name | Google Ads Analyst |
 | Version | 1.0.0 |
 | License | Apache-2.0 |
-| Author / publisher | kmorebetter |
+| Author / publisher / org | betterstory |
+| Website | https://betterstory.co |
 | Short description | Find wasted ad spend, audit your Google Ads account, and get a weekly review. Works from a CSV file. Never changes your account. |
 | Long description | Copy the "Long description" section of LISTING.md |
-| Category | Marketing / Analytics |
+| Category | marketing (manifest `category`) |
 | Keywords | google-ads, ppc, sem, negative-keywords, search-terms, audit, marketing, csv |
-| Logo | assets/logo.svg (in repo, relative path) |
+| Logo | assets/logo.svg (betterstory wordmark, 512x512 SVG on a dark rounded plate) |
 | Support | https://github.com/kmorebetter/google-ads-analyst/issues |
 | Manifest | .cursor-plugin/plugin.json (single plugin, `.cursor-plugin/marketplace.json` source `./`) |
 | Contents | 22 skills, 3 agents, 1 rule, Python tools (standard library only), no MCP servers, no hooks, no variables |

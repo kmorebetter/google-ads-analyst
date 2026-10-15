@@ -44,6 +44,9 @@ Marketing / Analytics
 ## Support
 https://github.com/kmorebetter/google-ads-analyst/issues
 
+## Publisher
+betterstory, https://betterstory.co
+
 ## License
 Apache-2.0. Free and open source.
 

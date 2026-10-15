@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Read-only Google Ads analysis for agents: negative keyword mining, weekly reviews, ad copy and extension audits, budget pacing, Performance Max checks, and campaign deep dives. Every number traces to a pulled fact. Works from uploaded CSV exports with no API, or from a read-only Google Ads API connection.",
   "author": {
-    "name": "kmorebetter"
+    "name": "betterstory",
+    "url": "https://betterstory.co"
   },
   "keywords": [
     "google-ads",
@@ -18,6 +19,13 @@
   ],
   "logo": "assets/logo.svg",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/kmorebetter/google-ads-analyst",
-  "repository": "https://github.com/kmorebetter/google-ads-analyst"
+  "homepage": "https://betterstory.co",
+  "repository": "https://github.com/kmorebetter/google-ads-analyst",
+  "category": "marketing",
+  "tags": [
+    "google-ads",
+    "ppc",
+    "marketing",
+    "csv"
+  ]
 }

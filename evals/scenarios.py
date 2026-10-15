@@ -306,8 +306,8 @@ def audit_scenarios():
         ("AD_POLICY", "Search - NonBrand - Estimates > Estimates (ad 9101)"),
         ("SINGLE_RSA", "Search - NonBrand - Receipts > Receipts"),
         ("MISSING_SITELINKS", "Search - NonBrand - Receipts"),
-        ("MISSING_SNIPPETS", "Search - NonBrand - Estimates"),
-        ("MISSING_SNIPPETS", "Search - NonBrand - Receipts"),
+        # snippets are missing in every search campaign: one account-level fix, not four
+        ("MISSING_SNIPPETS", "Account (all 4 search campaigns)"),
     }
     either = {("MISSING_SITELINKS", "Search | Core Brand Terms"), ("MISSING_SNIPPETS", "Search | Core Brand Terms"),
               ("MISSING_SITELINKS", "Acme Branded, Exact"), ("MISSING_SNIPPETS", "Acme Branded, Exact")}
@@ -330,6 +330,8 @@ def audit_scenarios():
             expect.add(("ZERO_CONV_SPEND", name))
         elif conv >= 5 and cost / conv > 240:
             expect.add(("HIGH_CPA", name))
+        elif 0 < conv < 5 and cost >= 480 and cost / conv > 240:
+            expect.add(("HIGH_COST_LOW_CONV", name))   # too few conversions to tune, too much spend to wait
         camps.append(camp_row(name, str(300 + i), "Search", "Enabled", cost, conv))
     out.append(FindScenario("A3 large account (60 campaigns)",
         {"campaigns.csv": export("Campaign report", D30, CAMP_HEAD, camps).encode()},

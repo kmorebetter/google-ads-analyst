@@ -95,6 +95,10 @@ def _config():
         return {}
 
 
+def _conv(n) -> str:
+    return f"{n} conversion" + ("" if n == 1 else "s")
+
+
 def _enabled(status: str) -> bool:
     s = (status or "").lower()
     return not s or s.startswith(("enabled", "eligible", "active", "limited"))
@@ -117,7 +121,7 @@ def _is_brand(row: dict, brand_ids, brand_tokens) -> bool:
     return bool(re.search(r"\bbrand(ed)?\b", n))
 
 
-def audit_campaigns(exp: G.Export, target_cpa, multiple, min_spend, brand_ids, brand_tokens):
+def audit_campaigns(exp: G.Export, target_cpa, multiple, min_spend, brand_ids, brand_tokens, conquest_tokens=()):
     out = []
     search_campaigns = []
     for r in exp.rows:
@@ -145,9 +149,15 @@ def audit_campaigns(exp: G.Export, target_cpa, multiple, min_spend, brand_ids, b
                                    f"spent {G.money(cost)} with 0 conversions",
                                    "Check conversion tracking first. If tracking is fine, review its search terms and keywords, then cut or pause the waste."))
             continue
+        if conv < MIN_CONV and target_cpa and multiple and not _is_conquest(name, conquest_tokens) and cost >= target_cpa * multiple * 2 \
+                and cost / conv > target_cpa * multiple:
+            out.append(Finding("HIGH_COST_LOW_CONV", name, "high",
+                               f"spent {G.money(cost)} for {_conv(conv)} ({G.money(cost / conv)} each, target {G.money(target_cpa)})",
+                               "Review its search terms and landing page now, and cap its budget until it converts. It has too few conversions to tune bids, but enough spend to show a problem."))
+            continue
         if conv < MIN_CONV:
             out.append(Finding("LOW_DATA", name, "info",
-                               f"only {conv} conversions (fewer than {MIN_CONV})",
+                               f"only {_conv(conv)} (fewer than {MIN_CONV})",
                                "Too little data for a bid or budget change. Wait for more conversions."))
             continue
         cpa = cost / conv
@@ -163,13 +173,17 @@ def audit_campaigns(exp: G.Export, target_cpa, multiple, min_spend, brand_ids, b
                 good = target_cpa and cpa <= target_cpa
                 out.append(Finding("LOST_IS_BUDGET", name, "medium",
                                    f"loses {int(lis * 100)}% of impressions to budget, cost per conversion {G.money(cpa)}",
-                                   ("Tighten the bid target first, since it beats target. Add budget only if volume is still capped."
+                                   ("Add budget here first. It converts below your target, so raise its daily budget or move money here from a weaker campaign."
                                     if good else "Fix cost per conversion before adding budget, since it is not beating target.")))
     return out, search_campaigns
 
 
-def audit_ads(exp: G.Export, conquest_tokens=()):
+def audit_ads(exp: G.Export, conquest_tokens=(), notes=None):
     out = []
+    head_cols = sum(1 for i in range(1, 16) if f"headline {i}" in exp.header)
+    if head_cols and head_cols < 8 and notes is not None:
+        notes.append(f"Headline counts: the Ads export has only {head_cols} headline columns. "
+                     "Add Headline 1 to Headline 15 in Columns to check how many headlines each ad has.")
     per_group = defaultdict(int)
     for r in exp.rows:
         if "responsive search" not in r["ad_type"].lower():
@@ -177,7 +191,7 @@ def audit_ads(exp: G.Export, conquest_tokens=()):
         status = (r.get("status") or "").lower()
         policy = (r.get("policy") or "").lower()
         ent = f"{r['campaign']} > {r['ad_group']}" + (f" (ad {r['ad_id']})" if r.get("ad_id") else "")
-        live = status.startswith(("enabled", "eligible", "approved", "limited")) or not status
+        live = status.startswith(("enabled", "eligible", "approved", "limited", "disapproved")) or not status
         if not live:
             continue   # paused or removed ads are not findings
         if "disapproved" in status or "disapproved" in policy or "limited" in status or "limited" in policy:
@@ -191,7 +205,7 @@ def audit_ads(exp: G.Export, conquest_tokens=()):
         if (r.get("strength") or "").lower() == "poor":
             out.append(Finding("POOR_AD_STRENGTH", ent, "medium", "ad strength Poor",
                                "Add more distinct headlines and descriptions. Ad strength is a variety score, so also check spelling and policy yourself."))
-        if heads and len(heads) < 8:
+        if heads and len(heads) < 8 and head_cols >= 8:
             out.append(Finding("FEW_HEADLINES", ent, "medium", f"{len(heads)} headlines (15 allowed)",
                                "Add headlines until there are at least 8, each saying something different."))
         if _is_conquest(r["campaign"], conquest_tokens) and any("{keyword:" in h.lower() for h in heads):
@@ -224,13 +238,19 @@ def audit_assets(exp: G.Export, search_campaigns):
                 else:
                     have_campaign[camp].add(code)
     out = []
-    for camp in search_campaigns:
-        for code in ASSET_KINDS:
-            if code in have_account or code in have_campaign.get(camp, set()):
-                continue
-            label = code.split("_", 1)[1].lower()
-            out.append(Finding(code, camp, "medium", f"no {label} at campaign or account level",
-                               f"Add at least 4 {label} to this campaign or to the whole account."))
+    for code in ASSET_KINDS:
+        missing = [c for c in search_campaigns
+                   if code not in have_account and code not in have_campaign.get(c, set())]
+        label = code.split("_", 1)[1].lower()
+        nice = "structured snippets" if label == "snippets" else label
+        if len(missing) >= 3 and len(missing) == len(search_campaigns):
+            out.append(Finding(code, f"Account (all {len(missing)} search campaigns)", "medium",
+                               f"no {nice} anywhere",
+                               f"Add at least 4 {nice} once at account level. That covers every campaign."))
+            continue
+        for camp in missing:
+            out.append(Finding(code, camp, "medium", f"no {nice} at campaign or account level",
+                               f"Add at least 4 {nice} to this campaign or to the whole account."))
     return out
 
 
@@ -298,13 +318,13 @@ def main(argv=None) -> int:
     findings, notes, sources = [], [], [Path(a.campaigns).name]
     try:
         camp = G.read_file(a.campaigns, CAMP_REQ, CAMP_OPT, "Campaigns", CAMP_FORBID)
-        f, search = audit_campaigns(camp, a.target_cpa, multiple, min_spend, brand_ids, brand_tokens)
+        f, search = audit_campaigns(camp, a.target_cpa, multiple, min_spend, brand_ids, brand_tokens, conquest_tokens)
         findings += f
         if "lost_is_budget" not in camp.rows[0]:
             notes.append("Budget limits: add the 'Search lost IS (budget)' column to the Campaigns export.")
         if a.ads:
             sources.append(Path(a.ads).name)
-            findings += audit_ads(G.read_file(a.ads, ADS_REQ, ADS_OPT, "Ads"), conquest_tokens)
+            findings += audit_ads(G.read_file(a.ads, ADS_REQ, ADS_OPT, "Ads"), conquest_tokens, notes)
         else:
             notes.append("Ad copy: upload the Ads export to check ad strength, headlines and policy.")
         if a.assets:

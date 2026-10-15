@@ -123,7 +123,7 @@ def read(raw: bytes, required: "dict[str, tuple]", optional: "dict[str, tuple] |
         raise CsvInputError(
             f"this does not look like a Google Ads {report_name} export: no header row "
             f"with all of [{want}] in the first 30 lines")
-    preamble = [" ".join(l) for l in lines[:header_at]]
+    preamble = [(delimiter if delimiter != "\t" else " ").join(l) for l in lines[:header_at]]
     title = preamble[0].strip() if preamble else ""
     dr = None
     for p in preamble:

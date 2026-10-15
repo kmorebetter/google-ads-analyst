@@ -111,11 +111,11 @@ FORBID = (("campaign type", "Campaigns"), ("ad strength", "Ads"), ("asset type",
 
 
 def sound_key(word: str) -> str:
-    """Rough sound-alike key: k->c, ph->f, collapse doubles, drop final e/es."""
+    """Rough sound-alike key: k->c, ph->f, collapse doubles, drop a final e, i or y (acme, akmi, acmy)."""
     w = re.sub(r"[^a-z0-9]", "", word.lower())
     w = w.replace("ph", "f").replace("ck", "c").replace("k", "c").replace("q", "c")
     w = re.sub(r"(.)\1+", r"\1", w)
-    w = re.sub(r"e+s?$", "", w) if len(w) > 3 else w
+    w = re.sub(r"[eiy]+s?$", "", w) if len(w) > 3 else w
     return w
 
 
@@ -180,6 +180,27 @@ def term_totals(rows: "list[Row]") -> "dict[str, tuple[Decimal, Decimal]]":
     return out
 
 
+_STOP = {"a", "an", "the", "and", "or", "for", "of", "in", "to", "-", "search", "campaign", "ads", "group"}
+
+
+def core_topic(row: Row) -> bool:
+    """True when every word of the term already names the campaign or ad group,
+    e.g. 'dental implants' in ad group 'Implants' / campaign 'Search - Implants'.
+    Blocking that term would switch off the campaign's own topic."""
+    words = [w for w in norm(row.search_term).split() if w not in _STOP]
+    names = set(norm(f"{row.campaign} {row.ad_group}").replace("-", " ").split()) - _STOP
+    if not words or not names:
+        return False
+    stems = {n.rstrip("s") for n in names}
+    hits = [w for w in words if w.rstrip("s") in stems]
+    return (len(hits) >= 1 and len(words) - len(hits) <= 1 and len(words) <= 3
+            and not any(n in norm(row.search_term) for n in NAVIGATIONAL))
+
+
+def _conv(n) -> str:
+    return f"{n} conversion" + ("" if n == 1 else "s")
+
+
 def decide(row: Row, t: Thresholds, brand_tokens=(), protect=(), competitor_tokens=()) -> "tuple[str, str]":
     term = norm(row.search_term)
     status = row.status.lower()
@@ -199,6 +220,10 @@ def decide(row: Row, t: Thresholds, brand_tokens=(), protect=(), competitor_toke
         if row.cost >= t.min_spend and row.clicks >= t.min_clicks and len(term.split()) == 1:
             return "REVIEW", (f"0 conversions on {row.cost} spend, but a one-word term is usually "
                               "your core topic. Fix the keyword or match type instead of an exact negative")
+        if row.cost >= t.min_spend and row.clicks >= t.min_clicks and core_topic(row):
+            return "REVIEW", (f"0 conversions on {row.cost} spend, but this term is the topic of "
+                              f"'{row.ad_group}' itself. Blocking it would switch the ad group off. "
+                              "Check the keyword, match type, ad and landing page instead")
         if row.cost >= t.min_spend and row.clicks >= t.min_clicks:
             return "NEGATE", (f"0 conversions on {row.cost} spend and {row.clicks} "
                               f"clicks (thresholds {t.min_spend} / {t.min_clicks})")
@@ -209,9 +234,17 @@ def decide(row: Row, t: Thresholds, brand_tokens=(), protect=(), competitor_toke
         return "KEEP", f"spend {row.cost} below {t.min_spend}"
     cpa = row.cost / row.conversions
     ceiling = t.target_cpa * t.target_cpa_multiple
+    if cpa > ceiling and core_topic(row):
+        return "REVIEW", (f"cost per conversion {cpa.quantize(Decimal('0.01'))} is above {ceiling} "
+                          f"({t.target_cpa_multiple}x target {t.target_cpa}), but this term is the topic of "
+                          f"'{row.ad_group}' itself and it does convert. Lower the bid or fix the "
+                          "landing page before you block it")
     if cpa > ceiling:
         return "CUT", (f"cost per conversion {cpa.quantize(Decimal('0.01'))} is above "
                        f"{ceiling} ({t.target_cpa_multiple}x target {t.target_cpa})")
+    if cpa > t.target_cpa:
+        return "KEEP", (f"converting at {cpa.quantize(Decimal('0.01'))} per conversion: above your "
+                        f"target {t.target_cpa} but under the cut line {ceiling}. Watch it")
     return "KEEP", f"converting at {cpa.quantize(Decimal('0.01'))} per conversion"
 
 
@@ -231,11 +264,11 @@ def run(rows, t, brand_tokens=(), protect=(), clearance: "dict | None" = None, c
             conv, cost = clearance[key] if isinstance(clearance[key], tuple) else (clearance[key], Decimal("0"))
             ceiling = t.target_cpa * t.target_cpa_multiple
             if conv > 0 and (cost == 0 or cost / conv <= ceiling):
-                r.reason = (f"was {r.decision}: {r.reason}; but the term has {conv} conversions "
+                r.reason = (f"was {r.decision}: {r.reason}; but the term has {_conv(conv)} "
                             "in the clearance export at an acceptable cost")
                 r.decision = "CLEARED"
             elif conv > 0:
-                r.reason += (f"; the clearance export also shows {conv} conversions at "
+                r.reason += (f"; the clearance export also shows {_conv(conv)} at "
                              f"{(cost / conv).quantize(Decimal('0.01'))} each, still above the cut line")
     return rows
 

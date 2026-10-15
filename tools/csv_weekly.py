@@ -96,9 +96,13 @@ def review(tw: dict, lw: dict, min_move: Decimal, planned: "Decimal | None" = No
         as_planned = planned is not None and d is not None and abs(d - planned) < Decimal("0.05")
         if d is not None and abs(d) >= WOW and abs(a.cost - b.cost) >= min_move and not as_planned:
             up = d > 0
+            no_payback = up and not tof and a.conv <= b.conv
             out.append(Finding("SPEND_UP" if up else "SPEND_DOWN", a.name, "medium",
-                               f"spend {G.money(b.cost)} to {G.money(a.cost)} ({int(d * 100):+d}%)",
-                               "Check the change history for a budget or bid edit. If none, look at search volume and impression share."))
+                               f"spend {G.money(b.cost)} to {G.money(a.cost)} ({int(d * 100):+d}%)"
+                               + ("" if tof else f", conversions {b.conv} to {a.conv}"),
+                               ("Check the change history for a budget or bid edit. Spend rose but conversions did not, "
+                                "so cap the budget until you find the cause." if no_payback else
+                                "Check the change history for a budget or bid edit. If none, look at search volume and impression share.")))
         if tof:
             continue
         dc = pct(a.conv, b.conv)
@@ -109,6 +113,10 @@ def review(tw: dict, lw: dict, min_move: Decimal, planned: "Decimal | None" = No
                                    f"conversions {b.conv} to {a.conv} ({int(dc * 100):+d}%)",
                                    "Look at its search terms and ads for what changed. Do not change bids until the trend holds a second week."
                                    if not up else "Note what changed so it can be repeated. No action needed yet."))
+            elif a.conv == 0 and b.conv >= 3 and d is not None and d > Decimal("-0.3"):
+                out.append(Finding("CONV_STOPPED", a.name, "medium",
+                                   f"conversions {b.conv} to 0 while spend held ({G.money(b.cost)} to {G.money(a.cost)})",
+                                   "Check that its conversion action still records. Submit a test form or call, then watch it next week."))
             else:
                 out.append(Finding("LOW_DATA", a.name, "info", f"conversions {b.conv} to {a.conv}",
                                    "Too few conversions to call a trend. Watch it next week."))
@@ -139,6 +147,11 @@ def pacing(mtd: dict, budget: Decimal, as_of: date):
     if ratio < 1 - BAND:
         return Finding("PACING_UNDER", "Monthly budget", "medium", ev,
                        "Spend is behind plan. Check for limited campaigns or paused ads before raising budgets.")
+    if projected > budget:
+        trim = (budget - spent) / (days - as_of.day) if days > as_of.day else Decimal(0)
+        return Finding("PACING_OK", "Monthly budget", "info", ev,
+                       f"Note: within the normal range, but heading about {G.money(projected - budget)} over. "
+                       f"If the budget is a hard cap, keep daily spend near {G.money(max(trim, Decimal(0)))}.")
     return Finding("PACING_OK", "Monthly budget", "info", ev, "On pace. No change needed.")
 
 

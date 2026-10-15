@@ -13,6 +13,13 @@ You need:
 - A Google Ads account you can log in to.
 - Grok Bot with the Google Ads Analyst plugin added.
 
+## Part 0: Add the plugin to Grok Bot
+
+1. In Grok Bot chat, type: **install the plugin from github.com/kmorebetter/google-ads-analyst**
+2. Grok Bot shows you what the plugin adds. Approve it.
+3. To check it worked, type: **what Google Ads skills do you have?** You should see
+   skills like account-setup, csv-import and csv-audit.
+
 ## Part 1: Start with a CSV file (no API needed)
 
 A CSV file is a simple spreadsheet file. You will download one from Google Ads
@@ -73,7 +80,26 @@ business choices:
    yourself. In Google Ads Editor, use **Account > Import > From file**. The
    bot does not do this step for you.
 
-That is it for Part 1. You can repeat Steps 3 to 5 every week or month.
+### Step 6 (optional): Get a one-time audit
+
+1. Download these reports for **Last 30 days**, the same way as Step 3:
+   - **Campaigns** (left menu: Campaigns). Add the columns Campaign ID,
+     Campaign type, Campaign status and Search lost IS (budget).
+   - **Ads** (Campaigns, then Ads). Add Ad strength and Headline 1 to Headline 15.
+   - **Assets** (Campaigns, then Assets).
+2. Drag all the files into chat and type: **audit my Google Ads account**
+3. The bot asks for your target cost per conversion if it does not have it yet.
+4. You get **audit.md** (what to fix first) and **change-list.csv**.
+
+### Step 7 (optional): Get a weekly review
+
+1. Download the **Campaigns** report twice: once for **last week** and once for
+   **the week before**. Both must cover the same number of days.
+2. For budget pacing, also download it for **This month** (month to date).
+3. Drag the files into chat and type: **write my weekly ads review**
+4. Tell the bot your monthly budget if it asks.
+
+That is it for Part 1. You can repeat Steps 3 to 7 every week or month.
 
 ## Part 2 (optional): Connect to the Google Ads API
 
