@@ -13,12 +13,29 @@ You need:
 - A Google Ads account you can log in to.
 - Grok Bot with the Google Ads Analyst plugin added.
 
-## Part 0: Add the plugin to Grok Bot
+## Part 0: Add the plugin
 
-1. In Grok Bot chat, type: **install the plugin from github.com/kmorebetter/google-ads-analyst**
-2. Grok Bot shows you what the plugin adds. Approve it.
-3. To check it worked, type: **what Google Ads skills do you have?** You should see
-   skills like account-setup, csv-import and csv-audit.
+### Main way: Grok Bot
+
+1. In Grok Bot, open the plugin search.
+2. Search for **Google Ads Analyst**.
+3. Click **Install**. Grok Bot shows you what the plugin adds. Approve it.
+4. To check it worked, type in chat: **what Google Ads skills do you have?**
+   You should see skills like account-setup, csv-import and csv-audit.
+
+Note: this works once the marketplace listing is live. Until then, the plugin
+will not show up in search.
+
+### Other way: Cursor on your computer
+
+1. Open a terminal.
+2. Copy the plugin into the Cursor plugins folder with this command:
+
+       git clone https://github.com/kmorebetter/google-ads-analyst.git ~/.cursor/plugins/local/google-ads-analyst
+
+3. Reload Cursor. You can quit and open it again, or run the
+   **Developer: Reload Window** command.
+4. Open the plugin settings and check that Google Ads Analyst is listed.
 
 ## Part 1: Start with a CSV file (no API needed)
 

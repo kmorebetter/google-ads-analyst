@@ -1,10 +1,11 @@
 # Submission-ready summary (NOT submitted)
 
 ## Grok Bot (primary target)
-Grok Bot installs plugins straight from a public GitHub repo. It reads
+Buyers search Grok Bot plugins for "Google Ads Analyst" and click Install.
+This works once the marketplace listing is live. The plugin reads
 `.cursor-plugin/marketplace.json` (source `./`) and `.cursor-plugin/plugin.json`.
-Install line for buyers: "install the plugin from github.com/kmorebetter/google-ads-analyst".
-No submission form is needed for that path.
+Alternate path (Cursor): clone the repo to
+`~/.cursor/plugins/local/google-ads-analyst` and reload.
 
 ## Cursor marketplace (optional, secondary)
 
