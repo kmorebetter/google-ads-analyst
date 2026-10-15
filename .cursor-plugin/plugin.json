@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Read-only Google Ads analysis for agents: negative keyword mining, weekly reviews, ad copy and extension audits, budget pacing, Performance Max checks, and campaign deep dives. Every number traces to a pulled fact. Works from uploaded CSV exports with no API, or from a read-only Google Ads API connection.",
   "author": {
-    "name": "betterstory",
+    "name": "Better Story / Kerry Morrison",
     "email": "kmo@betterstory.co",
     "url": "https://betterstory.co"
   },
