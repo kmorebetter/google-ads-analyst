@@ -21,6 +21,7 @@ Submit in a browser at: **https://cursor.com/marketplace/publish**
 | License | Apache-2.0 |
 | Author / publisher / org | betterstory |
 | Website | https://betterstory.co |
+| Contact email | kmo@betterstory.co |
 | Short description | Find wasted ad spend, audit your Google Ads account, and get a weekly review. Works from a CSV file. Never changes your account. |
 | Long description | Copy the "Long description" section of LISTING.md |
 | Category | marketing (manifest `category`) |
